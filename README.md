@@ -50,11 +50,11 @@ $ sudo lshw -C network
   *-network
        description: Ethernet interface
        physical id: d
-       bus info:<IPAddress>
-       logical name:<IPAddress>
-       serial:<IPAddress>
-       capabilities:<IPAddress>
-       configuration:<IPAddress>
+       bus info:<Redacted>
+       logical name:<Redacted>
+       serial:<Redacted>
+       capabilities:<Redacted>
+       configuration:<Redacted>
 ```
 
 According to the output of `lshw -C network`, it appears that the Intel wireless adapter is detected by the system but is listed as `*-network UNCLAIMED`. This usually means that the driver for the device is not installed or loaded.
@@ -65,7 +65,7 @@ Identify the exact model of your Intel wireless adapter:
 
 ```sh
 $ lspci -vnn | grep -i network 
-00:<IPAddress> Network controller [0280]: Intel Corporation Comet Lake PCH CNVi WiFi [8086:<IPAddress>]
+00:<Redacted> Network controller [0280]: Intel Corporation Comet Lake PCH CNVi WiFi [8086:<Redacted>]
 ```
 
 ## Installing the firmware
